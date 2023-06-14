@@ -26,7 +26,7 @@ import { ResponseInterceptor } from './common/interceptors/response.interceptor'
           entities: [__dirname + '/modules/**/*.entity{.ts,.js}'],
           logging: false,
           synchronize: false,
-          migrationsRun: true,
+          migrationsRun: false,
           migrations: [__dirname + '/migrations/**/*{.js,.ts}'],
           migrationsTableName: 'migrations_history',
         };
