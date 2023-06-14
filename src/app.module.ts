@@ -37,26 +37,28 @@ import { ResponseInterceptor } from './common/interceptors/response.interceptor'
     ...modules,
   ],
   controllers: [],
-  providers: [{
-    provide: APP_INTERCEPTOR,
-    useClass: ResponseInterceptor,
-  },
-  {
-    provide: APP_PIPE,
-    useFactory: () =>
-      new ValidationPipe({
-        transform: true,
-        whitelist: true,
-        validationError: {
-          target: false,
-          value: false,
-        },
-        stopAtFirstError: true,
-      }),
-  },
-  {
-    provide: APP_FILTER,
-    useClass: ExceptionsFilter,
-  },],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: ResponseInterceptor,
+    },
+    {
+      provide: APP_PIPE,
+      useFactory: () =>
+        new ValidationPipe({
+          transform: true,
+          whitelist: true,
+          validationError: {
+            target: false,
+            value: false,
+          },
+          stopAtFirstError: true,
+        }),
+    },
+    {
+      provide: APP_FILTER,
+      useClass: ExceptionsFilter,
+    },
+  ],
 })
 export class AppModule {}
