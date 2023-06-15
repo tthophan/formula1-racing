@@ -26,15 +26,27 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## How to deploy?
+### Software installed on your system:
+- node (v18.12 or higher).
+- npm (v8.19 or higher).
+- pm2 (Process Manager for Node.js applications) OR docker compose. 
+
+## Setup environment
+- Create the file .env from .env.example
+- Update the configuration properties depending on environment and your project.
+
 ## Installation
 
 ```bash
-$ yarn install
+$ yarn install --frozen-lockfile
 ```
-
 ## Running the app
 
 ```bash
+# Running migration database (Crawl data)
+$ npm run typeorm:migrate
+
 # development
 $ yarn run start
 
@@ -44,29 +56,39 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
-
-## Test
-
+Open http://localhost:8080 with your browser to see the result.
+## Migration
 ```bash
-# unit tests
-$ yarn run test
+# Generate migration database changes.
+$ npm run migration:generate --name=<your_file_name>
 
-# e2e tests
-$ yarn run test:e2e
+# Create migration file
+$ npm run migration:create --name=<your_file_name>
 
-# test coverage
-$ yarn run test:cov
+# Migration
+$ npm run typeorm:migrate
+
+# Revert migration
+$ npm run typeorm:revert
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Source code Structure
+```bash
+└───src
+  └─── common               
+        └─── base             
+        └─── filters          
+        └─── interceptors    
+        └─── models       
+        └─── types
+    └─── modules              
+        └─── racing            
+            └─── entities     
+            └─── queries      
+            └─── repository   
+            └─── transformers
+            └─── controllers 
+```
 
 ## License
 
