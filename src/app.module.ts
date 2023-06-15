@@ -18,10 +18,19 @@ import { ResponseInterceptor } from './common/interceptors/response.interceptor'
     }),
     TypeOrmModule.forRootAsync({
       useFactory: (configService: ConfigService) => {
-        const connectionConfig = configService.get<string>('DATABASE_URL');
+        const host= configService.get<string>('DATABASE_HOST');
+        const port = configService.get<number>('DATABASE_PORT');
+        const username = configService.get<string>('DATABASE_USERNAME');
+        const password = configService.get<string>('DATABASE_PASSWORD');
+        const database = configService.get<string>('DATABASE_DB_NAME');
+        
         return {
           type: 'mysql',
-          url: connectionConfig,
+          host,
+          port,
+          username,
+          password,
+          database,
           autoLoadEntities: true,
           entities: [__dirname + '/modules/**/*.entity{.ts,.js}'],
           logging: false,
@@ -61,4 +70,4 @@ import { ResponseInterceptor } from './common/interceptors/response.interceptor'
     },
   ],
 })
-export class AppModule {}
+export class AppModule { }
