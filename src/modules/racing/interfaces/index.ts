@@ -1,1 +1,1 @@
-export * from './race-result.interface'
+export * from './race-result.interface';

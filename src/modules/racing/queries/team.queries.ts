@@ -1,8 +1,8 @@
-import { Injectable } from "@nestjs/common";
-import { InjectEntityManager } from "@nestjs/typeorm";
-import { BaseQueries } from "src/common/base/base.queries";
-import { EntityManager } from "typeorm";
-import { Team } from "../entities/team.entity";
+import { Injectable } from '@nestjs/common';
+import { InjectEntityManager } from '@nestjs/typeorm';
+import { BaseQueries } from 'src/common/base/base.queries';
+import { EntityManager } from 'typeorm';
+import { Team } from '../entities/team.entity';
 
 @Injectable()
 export class TeamQueries extends BaseQueries<Team> {

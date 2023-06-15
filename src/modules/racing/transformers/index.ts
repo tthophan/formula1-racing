@@ -1,1 +1,1 @@
-export * from './race-result.transform'
+export * from './race-result.transform';

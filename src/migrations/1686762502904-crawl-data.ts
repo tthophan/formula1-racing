@@ -2,10 +2,11 @@ import { Driver, RaceGrand, RaceResult } from 'src/modules/racing/entities';
 import { TeamDrivers } from 'src/modules/racing/entities/team-driver.entity';
 import { Team } from 'src/modules/racing/entities/team.entity';
 import { MigrationInterface, QueryRunner } from 'typeorm';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const DOMParser = require('dom-parser');
 
 export class CrawlData1686762502904 implements MigrationInterface {
-    name = 'CrawlData1686762502904';
+  name = 'CrawlData1686762502904';
   public async up(queryRunner: QueryRunner): Promise<void> {
     const domain = `https://www.formula1.com`;
     const commonUrl = `${domain}/en/results.html`;
@@ -266,7 +267,7 @@ export class CrawlData1686762502904 implements MigrationInterface {
       .filter((x) => x);
 
     // Retry Crawl exceptions
-    for (let { url, year, id } of [...exceptions]) {
+    for (const { url, year, id } of [...exceptions]) {
       try {
         const rs = await fetchRaces(url);
         raceResults = [
@@ -281,7 +282,7 @@ export class CrawlData1686762502904 implements MigrationInterface {
     console.info('End Craw Race Results');
 
     // Create Drivers & Teams & TeamDrivers
-    for (let raceResult of raceResults) {
+    for (const raceResult of raceResults) {
       if (
         !cacheTeamDrivers[
           `${cacheDrivers[raceResult.driverName]?.id}${raceResult.year}`

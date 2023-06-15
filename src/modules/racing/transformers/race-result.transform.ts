@@ -15,7 +15,7 @@ export class RaceResultTransform {
       raceGrandName: input.raceGrand?.name,
       teamName: input.teamDriver?.team?.name,
       year: input.raceGrand?.year,
-      time: input.time
+      time: input.time,
     });
     if (isArray(input)) {
       return input.map(mapping);

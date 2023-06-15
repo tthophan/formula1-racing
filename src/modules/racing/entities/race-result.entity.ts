@@ -16,7 +16,7 @@ export class RaceResult extends AuditEntity {
 
   @Column({ name: 'points', nullable: true })
   points: number;
-  
+
   @Column({ name: 'laps', nullable: true })
   laps: number;
 
