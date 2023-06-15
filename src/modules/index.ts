@@ -1,5 +1,3 @@
-import { RacingModule } from "./racing/racing.module";
+import { RacingModule } from './racing/racing.module';
 
-export const modules = [
-    RacingModule
-]
+export const modules = [RacingModule];

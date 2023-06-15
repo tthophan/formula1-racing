@@ -15,5 +15,5 @@ export interface RaceResultResponse {
 
   driverNationality: string;
 
-  time: string
+  time: string;
 }

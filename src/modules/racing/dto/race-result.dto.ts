@@ -1,11 +1,5 @@
-import { Transform, Type } from 'class-transformer';
-import {
-  IsInstance,
-  IsNumber,
-  IsOptional,
-  IsString,
-  ValidateNested,
-} from 'class-validator';
+import { Transform } from 'class-transformer';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 import { RaceResult } from '../entities';
 
 type SortType = { [k in keyof Partial<RaceResult>]: 'ASC' | 'DESC' };

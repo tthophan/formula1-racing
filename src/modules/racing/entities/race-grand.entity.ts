@@ -21,7 +21,7 @@ export class RaceGrand extends AuditEntity {
 
   @OneToMany(() => RaceResult, (raceResult) => raceResult.raceGrand, {
     cascade: true,
-    onDelete: 'CASCADE'
+    onDelete: 'CASCADE',
   })
   raceResults?: Array<RaceResult>;
 }

@@ -4,7 +4,7 @@ import { config } from 'dotenv';
 async function bootstrap() {
   config();
   const app = await NestFactory.create(AppModule);
-  const port = process.env.PORT || 8080
+  const port = process.env.PORT || 8080;
 
   app.setGlobalPrefix('api/v1');
   await app.listen(port, async () => {

@@ -1,4 +1,9 @@
-import { ArgumentsHost, Catch, HttpException, HttpStatus } from '@nestjs/common';
+import {
+  ArgumentsHost,
+  Catch,
+  HttpException,
+  HttpStatus,
+} from '@nestjs/common';
 import { BaseExceptionFilter } from '@nestjs/core';
 import { isArray } from 'class-validator';
 import { ErrorResponse } from '../models/base.model';
@@ -43,6 +48,7 @@ export class ExceptionsFilter extends BaseExceptionFilter {
     }
     //Other exception that unknown
     else {
+      // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
       httpAdapter!.reply(
         host.switchToHttp().getResponse(),
         new ErrorResponse(

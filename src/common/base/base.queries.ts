@@ -68,8 +68,8 @@ export class BaseQueries<
   }
 
   async getPaginated(
-    pageSize: number = 10,
-    pageNumber: number = 1,
+    pageSize = 10,
+    pageNumber = 1,
     conditions?: FindManyOptions<Entity>,
   ): Promise<Paginated<Entity>> {
     const [entities, total] = await this.findAndCount({
