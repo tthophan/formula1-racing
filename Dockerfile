@@ -14,7 +14,7 @@ ENV NODE_ENV=production PORT=80
 WORKDIR  /app
 COPY     --chown=root:root --from=builder /pkg /app/
 
-RUN yarn install --production --frozen-lockfile
+RUN yarn install --ignore-scripts --production --frozen-lockfile
 USER     root
 EXPOSE   80
 CMD      ["node", "dist/src/main", "2>&1"]
