@@ -4,7 +4,13 @@ services:
       context: .
     environment:
       NODE_ENV: production
-      DATABASE_URL: 'mysql://root:rootpw@db:3306/vrillar'
+      # DATABASE_URL: 'mysql://root:rootpw@db:3306/vrillar'
+      DATABASE_HOST: db
+      DATABASE_PORT: 3306
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: rootpw
+      DATABASE_DB_NAME: vrillar
+      PORT: 80
     env_file:
       - .env
     ports:
