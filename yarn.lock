@@ -3934,10 +3934,10 @@ mute-stream@0.0.8:
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-mysql2@^3.4.4:
-  version "3.4.4"
-  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-3.4.4.tgz#14b85b97cf3b126c5b280cd4fc3c4a359a913aa0"
-  integrity sha512-PLeHxUNQSJ91DJFwDOsSXseK7bkQhxji7dBkl6PNyyVN7P4yYw8uMrDbespM1w0Yj4agbdRuqKuoS5pUFbN5aQ==
+mysql2@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/mysql2/-/mysql2-3.6.0.tgz#d54ef4867655daf2f65ced1dbdb63852314f039f"
+  integrity sha512-EWUGAhv6SphezurlfI2Fpt0uJEWLmirrtQR7SkbTHFC+4/mJBrPiSzHESHKAWKG7ALVD6xaG/NBjjd1DGJGQQQ==
   dependencies:
     denque "^2.1.0"
     generate-function "^2.3.1"
