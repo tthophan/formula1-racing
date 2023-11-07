@@ -2284,10 +2284,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-parser@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/dom-parser/-/dom-parser-1.0.10.tgz#fdf5f14e882efe1ea4e1abb2b0900a263c92dafd"
-  integrity sha512-E4VXFdNHOUchXDidWXq2UGqL+bYBlA4AjlSyUv9lpMi7/SRFFnR6bSH34HKlF96FevF0WpfpO6TNk+UocGMyBg==
+dom-parser@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dom-parser/-/dom-parser-1.1.1.tgz#cd9356b87236bb4e8cc9615b86c234c0a6bc0c2e"
+  integrity sha512-OV0WJyK9Yw3qSrcpnkvZL53AlLfQKrnG9G7EhFIVq0l8kb37YFn/2CQjIBE9Xt2exd9NzM5J0BV3TxUTwAwkZQ==
 
 dotenv-expand@10.0.0:
   version "10.0.0"
